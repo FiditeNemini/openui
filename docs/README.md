@@ -19,14 +19,13 @@ pnpm --filter @openuidev/docs build
 
 ### Chat and comparison demo configuration
 
-`/chat` remains the standalone OpenUI OSS and Cloud chat and starts in **OpenUI OSS** mode. Its
-selected mode is not stored across reloads.
+`/chat` is the standalone OpenUI Cloud chat.
 
 `/compare` compares two visible response modes at a time and defaults to **Rendered Markdown vs
 OpenUI Cloud**. Use its page-level switcher to show **Markdown vs OSS** or **OSS vs Cloud**. The
 selected pair is stored in the `pair` query parameter. All three comparison providers remain
 mounted and receive each shared prompt; switching the visible pair resets the demo. Markdown and
-OSS generation use the existing server-side `OPENROUTER_API_KEY`.
+OSS generation use the server-side `THESYS_API_KEY`.
 
 OpenUI Cloud requires the following server-side variables. If either is missing, Cloud requests
 show the unavailable state at runtime:
